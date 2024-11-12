@@ -1,0 +1,20 @@
+{
+    "name": "Bintang Fajar Nusnatara",
+    "short_name": "BintangNusantara",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#fdfdfd",
+    "theme_color": "#db4938",
+    "orientation": "portrait-primary",
+    "icons": [
+      {
+        "src": "/dist/img/icon-192x192.jpg",
+        "type": "image/png", "sizes": "192x192"
+      },
+      {
+        "src": "/dist/img/icon-512x512.jpg",
+        "type": "image/png", "sizes": "512x512"
+      }
+   
+    ]
+  }
