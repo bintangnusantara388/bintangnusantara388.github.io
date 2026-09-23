@@ -1,45 +1,627 @@
 <!doctype html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portofolio Bintang Fajar Nusantara — creative technologist, UI/UX enthusiast, dan mahasiswa Teknik Informatika.">
-  <meta name="theme-color" content="#0b1020">
-  <title>Bintang Fajar Nusantara — Creative Technologist</title>
-  <link rel="manifest" href="manifest.json">
-  <link rel="shortcut icon" href="dist/img/icon-192x192.jpg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{--bg:#0b1020;--surface:#11182b;--card:#151f36;--text:#f7f8fb;--muted:#9ba8c2;--line:rgba(255,255,255,.1);--lime:#c9f66b;--cyan:#68e3d0;--max:1180px}
-    *{box-sizing:border-box;margin:0;padding:0} html{scroll-behavior:smooth} body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;line-height:1.6;overflow-x:hidden} a{color:inherit;text-decoration:none} img{max-width:100%;display:block}.container{width:min(var(--max),calc(100% - 48px));margin:auto}.eyebrow{color:var(--lime);font-size:.75rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase}.muted{color:var(--muted)}
-    body:before{content:'';position:fixed;inset:0;z-index:-2;background:radial-gradient(circle at 85% 5%,rgba(104,227,208,.14),transparent 28%),radial-gradient(circle at 5% 30%,rgba(201,246,107,.08),transparent 25%)} body:after{content:'';position:fixed;inset:0;z-index:-1;opacity:.18;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:48px 48px;mask-image:linear-gradient(to bottom,black,transparent 75%)}
-    header{height:82px;display:flex;align-items:center;position:fixed;top:0;left:0;right:0;z-index:10;background:rgba(11,16,32,.7);border-bottom:1px solid transparent;backdrop-filter:blur(16px);transition:.3s} header.scrolled{border-color:var(--line);background:rgba(11,16,32,.9)}.nav{display:flex;align-items:center;justify-content:space-between}.brand{font-family:'Space Grotesk';font-weight:700;font-size:1.1rem;letter-spacing:-.04em}.brand span{color:var(--lime)}.nav-links{display:flex;gap:32px;color:var(--muted);font-size:.9rem}.nav-links a{transition:.25s}.nav-links a:hover{color:var(--lime)}.nav-cta{border:1px solid var(--line);border-radius:999px;padding:10px 17px;color:var(--text);font-size:.86rem}.menu{display:none;background:none;border:0;color:white;font-size:1.6rem}
-    section{padding:115px 0}.hero{min-height:100vh;padding-top:180px;display:flex;align-items:center}.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:70px}.hero h1{font-family:'Space Grotesk';font-size:clamp(3.3rem,7vw,6.5rem);line-height:.95;letter-spacing:-.075em;margin:20px 0 28px;max-width:750px}.hero h1 em{font-style:normal;color:var(--lime)}.hero-copy{font-size:1.08rem;max-width:550px;color:var(--muted)}.actions{display:flex;gap:14px;align-items:center;margin-top:35px}.button{display:inline-flex;align-items:center;gap:10px;padding:14px 21px;border-radius:999px;font-weight:700;font-size:.9rem;transition:.25s}.button-primary{background:var(--lime);color:#101518}.button-primary:hover{box-shadow:0 0 30px rgba(201,246,107,.25);transform:translateY(-3px)}.button-ghost{border:1px solid var(--line);color:var(--text)}.button-ghost:hover{border-color:var(--lime);color:var(--lime)}
-    .visual{position:relative;min-height:500px;display:grid;place-items:center}.orb{position:absolute;width:360px;height:360px;border-radius:50%;background:linear-gradient(140deg,var(--cyan),#6476ff 58%,#a766ff);filter:blur(1px);opacity:.9;animation:float 7s ease-in-out infinite}.orb:after{content:'';position:absolute;inset:14px;border-radius:50%;background:var(--bg)}.portrait{position:relative;z-index:1;width:min(330px,75%);filter:grayscale(1);mix-blend-mode:screen;object-fit:contain;transition:.4s}.portrait:hover{filter:grayscale(0);transform:scale(1.04)}.visual-tag{position:absolute;z-index:2;background:rgba(21,31,54,.9);border:1px solid var(--line);border-radius:14px;padding:12px 15px;font-size:.78rem;backdrop-filter:blur(10px)}.tag-one{top:15%;right:2%}.tag-two{bottom:15%;left:4%}.dot{display:inline-block;width:7px;height:7px;background:var(--lime);border-radius:50%;margin-right:7px}@keyframes float{50%{transform:translateY(-18px) rotate(6deg)}}
-    .stats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:grid;grid-template-columns:repeat(3,1fr);padding:25px 0;margin-top:60px}.stat{padding:0 28px;border-right:1px solid var(--line)}.stat:first-child{padding-left:0}.stat:last-child{border:0}.stat strong{font:700 2rem 'Space Grotesk';display:block;color:var(--lime)}.stat span{color:var(--muted);font-size:.82rem}
-    .section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:44px}.section-head h2{font:600 clamp(2.3rem,5vw,4rem) 'Space Grotesk';letter-spacing:-.06em;line-height:1}.section-head p{max-width:390px;color:var(--muted)}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px}.about-copy{font-size:1.2rem;color:#d9dfeb;line-height:1.7}.about-copy strong{color:var(--lime)}.skills{display:flex;flex-wrap:wrap;gap:10px;align-content:start}.skill{border:1px solid var(--line);border-radius:999px;padding:10px 15px;color:var(--muted);font-size:.85rem}.skill:hover{border-color:var(--cyan);color:var(--cyan)}
-    .work{background:#0e1527}.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.project{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;transition:.3s}.project:hover{transform:translateY(-7px);border-color:rgba(201,246,107,.55)}.project-image{height:270px;overflow:hidden;background:linear-gradient(135deg,#263759,#11182b)}.project-image img{width:100%;height:100%;object-fit:cover;opacity:.72;transition:.5s}.project:hover img{transform:scale(1.06);opacity:1}.project-body{padding:23px}.project h3{font:600 1.35rem 'Space Grotesk';margin-bottom:8px}.project p{color:var(--muted);font-size:.9rem}.project-meta{display:flex;gap:8px;margin-top:18px}.project-meta span{color:var(--cyan);font-size:.72rem;text-transform:uppercase;letter-spacing:.08em}
-    .contact-card{border:1px solid var(--line);background:linear-gradient(120deg,rgba(201,246,107,.1),rgba(104,227,208,.06));border-radius:26px;padding:clamp(30px,6vw,75px);display:flex;justify-content:space-between;align-items:center;gap:30px}.contact-card h2{font:600 clamp(2.2rem,5vw,4rem) 'Space Grotesk';letter-spacing:-.06em;line-height:1;margin-top:15px}.contact-card p{color:var(--muted);margin-top:15px}.contact-card .button{flex-shrink:0}.socials{display:flex;gap:18px;margin-top:28px;color:var(--muted);font-size:.9rem}.socials a:hover{color:var(--lime)}footer{padding:28px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.82rem}.footer-inner{display:flex;justify-content:space-between}
-    .reveal{opacity:0;transform:translateY(22px);transition:.7s ease}.reveal.visible{opacity:1;transform:none}@media(max-width:800px){.container{width:min(var(--max),calc(100% - 34px))}.nav-links,.nav-cta{display:none}.menu{display:block}.nav-links.open{display:flex;position:absolute;top:75px;left:17px;right:17px;flex-direction:column;gap:0;padding:12px;background:var(--surface);border:1px solid var(--line);border-radius:16px}.nav-links.open a{padding:12px}.hero{padding-top:130px}.hero-grid,.about-grid{grid-template-columns:1fr;gap:35px}.hero h1{font-size:clamp(3.4rem,16vw,5rem)}.visual{min-height:390px}.orb{width:290px;height:290px}.stats{margin-top:35px}.stat{padding:0 14px}.stat strong{font-size:1.5rem}.section-head{display:block}.section-head p{margin-top:18px}.projects{grid-template-columns:1fr}.contact-card{display:block}.contact-card .button{margin-top:28px}.footer-inner{display:block}.footer-inner span{display:block;margin-top:8px}}
-  </style>
-</head>
-<body>
-  <header id="header"><div class="container nav"><a class="brand" href="#home">Bintang<span>.</span></a><button class="menu" id="menu" aria-label="Buka menu">☰</button><nav class="nav-links" id="nav-links"><a href="#about">Tentang</a><a href="#work">Karya</a><a href="#contact">Kontak</a></nav><a class="nav-cta" href="mailto:bintangnusantara3832@gmail.com">Let's talk ↗</a></div></header>
-  <main>
-    <section class="hero" id="home"><div class="container hero-grid"><div class="reveal"><div class="eyebrow">Portfolio / 2024—Now</div><h1>Membuat ide<br>jadi <em>berarti.</em></h1><p class="hero-copy">Halo, saya <strong>Bintang Fajar Nusantara</strong> — mahasiswa Teknik Informatika yang mengeksplorasi dunia UI/UX, desain digital, dan teknologi web.</p><div class="actions"><a class="button button-primary" href="#work">Lihat karya <span>↗</span></a><a class="button button-ghost" href="https://wa.me/6285141316787" target="_blank" rel="noreferrer">Hubungi saya</a></div><div class="stats"><div class="stat"><strong>UI/UX</strong><span>Design & research</span></div><div class="stat"><strong>Web</strong><span>Creative development</span></div><div class="stat"><strong>∞</strong><span>Curious learner</span></div></div></div><div class="visual reveal"><div class="orb"></div><img class="portrait" src="dist/img/Desain tanpa judul.png" alt="Bintang Fajar Nusantara"><div class="visual-tag tag-one"><span class="dot"></span>Available to create</div><div class="visual-tag tag-two">✦ Tegal, Indonesia</div></div></div></section>
-    <section id="about"><div class="container"><div class="section-head reveal"><div><div class="eyebrow">01 / Tentang saya</div><h2>Desain dengan<br>rasa ingin tahu.</h2></div><p>Perpaduan antara rasa penasaran, empati, dan perhatian terhadap detail untuk menciptakan pengalaman digital yang relevan.</p></div><div class="about-grid"><p class="about-copy reveal">Saya percaya karya yang baik tidak hanya terlihat <strong>keren</strong>, tapi juga terasa mudah digunakan dan punya cerita. Saat ini saya terus bertumbuh lewat proyek-proyek digital, belajar dari proses, dan berkolaborasi dengan orang-orang hebat.</p><div class="skills reveal"><span class="skill">UI/UX Design</span><span class="skill">Graphic Design</span><span class="skill">Frontend Development</span><span class="skill">Tailwind CSS</span><span class="skill">Figma</span><span class="skill">Microsoft Office</span><span class="skill">Creative Problem Solving</span><span class="skill">Teamwork</span></div></div></div></section>
-    <section class="work" id="work"><div class="container"><div class="section-head reveal"><div><div class="eyebrow">02 / Selected work</div><h2>Karya pilihan.</h2></div><p>Beberapa eksperimen dan proyek yang merepresentasikan perjalanan kreatif saya.</p></div><div class="projects"><article class="project reveal"><div class="project-image"><img src="dist/img/2.jpg" alt="Bintang portfolio website" loading="lazy"></div><div class="project-body"><h3>Personal Portfolio</h3><p>Website portofolio personal yang dirancang sebagai ruang untuk bercerita, bereksperimen, dan terhubung.</p><div class="project-meta"><span>Web Design</span><span>·</span><span>PWA</span></div></div></article><article class="project reveal"><div class="project-image"><img src="dist/img/2.jpg" alt="Eksplorasi design digital" loading="lazy"></div><div class="project-body"><h3>Visual Explorations</h3><p>Kumpulan eksplorasi visual dan desain grafis untuk mengasah perspektif serta menemukan gaya baru.</p><div class="project-meta"><span>Art Direction</span><span>·</span><span>Visual</span></div></div></article></div></div></section>
-    <section id="contact"><div class="container"><div class="contact-card reveal"><div><div class="eyebrow">03 / Let's connect</div><h2>Punya ide?<br>Mari wujudkan.</h2><p>Terbuka untuk kolaborasi, diskusi, atau sekadar menyapa.</p><div class="socials"><a href="https://github.com/bintangnusantara388" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://www.instagram.com/bntngnsntra383_/" target="_blank" rel="noreferrer">Instagram ↗</a><a href="https://youtube.com/@bntngnsntr383" target="_blank" rel="noreferrer">YouTube ↗</a></div></div><a class="button button-primary" href="mailto:bintangnusantara3832@gmail.com">Kirim email ↗</a></div></div></section>
-  </main>
-  <footer><div class="container footer-inner"><span>© 2024 Bintang Fajar Nusantara</span><span>Designed & built with intention ✦</span></div></footer>
-  <script>
-    const header=document.getElementById('header'), menu=document.getElementById('menu'), links=document.getElementById('nav-links');
-    menu.addEventListener('click',()=>links.classList.toggle('open')); links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
-    window.addEventListener('scroll',()=>header.classList.toggle('scrolled',scrollY>30));
-    const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12}); document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
-    if('serviceWorker' in navigator) window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
-  </script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portofolio Bintang Fajar Nusantara — mahasiswa Teknik Informatika, UI/UX designer, dan kreator digital."
+    />
+    <meta name="theme-color" content="#0b1020" />
+    <title>Bintang Fajar Nusantara</title>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="shortcut icon" href="dist/img/icon-192x192.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #0b1020;
+        --bg-soft: #10192d;
+        --card: #121d34;
+        --line: rgba(255, 255, 255, 0.12);
+        --text: #eef3ff;
+        --muted: #aab7d3;
+        --lime: #d7ff73;
+        --cyan: #6fe8d8;
+        --purple: #8d6bff;
+        --max: 1180px;
+      }
+
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      html { scroll-behavior: smooth; }
+      body {
+        font-family: "DM Sans", sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -2;
+        background:
+          radial-gradient(circle at 84% 10%, rgba(111, 232, 216, 0.16), transparent 24%),
+          radial-gradient(circle at 12% 34%, rgba(215, 255, 115, 0.12), transparent 28%),
+          radial-gradient(circle at 50% 78%, rgba(141, 107, 255, 0.12), transparent 28%);
+      }
+      body::after {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        background-image:
+          linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+        background-size: 38px 38px;
+        mask-image: linear-gradient(to bottom, black, transparent 85%);
+      }
+      a { color: inherit; text-decoration: none; }
+      img { display: block; max-width: 100%; }
+      .container { width: min(var(--max), calc(100% - 40px)); margin: 0 auto; }
+      .eyebrow {
+        color: var(--lime);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+      .muted { color: var(--muted); }
+
+      header {
+        position: fixed;
+        top: 0; left: 0; right: 0;
+        z-index: 20;
+        height: 82px;
+        display: flex;
+        align-items: center;
+        background: rgba(11,16,32,0.55);
+        border-bottom: 1px solid transparent;
+        backdrop-filter: blur(14px);
+        transition: 0.25s ease;
+      }
+      header.scrolled { border-color: var(--line); background: rgba(11,16,32,0.9); }
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+      }
+      .brand {
+        font-family: "Space Grotesk", sans-serif;
+        font-weight: 700;
+        font-size: 1.1rem;
+        letter-spacing: -0.04em;
+      }
+      .brand span { color: var(--lime); }
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+      .nav-links a { transition: 0.2s ease; }
+      .nav-links a:hover { color: var(--lime); }
+      .nav-cta {
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 10px 18px;
+        font-size: 0.86rem;
+        transition: 0.2s ease;
+      }
+      .nav-cta:hover { border-color: var(--lime); color: var(--lime); }
+      .menu-button {
+        display: none;
+        background: transparent;
+        border: 0;
+        color: white;
+        font-size: 1.6rem;
+        cursor: pointer;
+      }
+
+      section { padding: 116px 0; }
+      .hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        padding-top: 150px;
+      }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.08fr 0.92fr;
+        gap: 60px;
+        align-items: center;
+      }
+      .hero h1 {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: clamp(3.2rem, 6vw, 6.3rem);
+        line-height: 0.94;
+        letter-spacing: -0.075em;
+        margin: 18px 0 24px;
+      }
+      .hero h1 em {
+        color: var(--lime);
+        font-style: normal;
+      }
+      .hero-copy {
+        font-size: 1.08rem;
+        color: var(--muted);
+        max-width: 560px;
+      }
+      .hero-copy strong { color: var(--text); }
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 30px;
+      }
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 14px 22px;
+        border-radius: 999px;
+        font-weight: 700;
+        font-size: 0.9rem;
+        transition: 0.2s ease;
+      }
+      .button-primary {
+        background: var(--lime);
+        color: #0d1412;
+      }
+      .button-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 18px 30px rgba(215,255,115,0.2);
+      }
+      .button-ghost {
+        border: 1px solid var(--line);
+        color: var(--text);
+      }
+      .button-ghost:hover { border-color: var(--lime); color: var(--lime); }
+
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+        padding: 22px 0;
+        margin-top: 44px;
+      }
+      .stat {
+        padding-right: 18px;
+        border-right: 1px solid var(--line);
+      }
+      .stat:last-child { border-right: 0; }
+      .stat strong {
+        display: block;
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 2rem;
+        color: var(--lime);
+      }
+      .stat span { color: var(--muted); font-size: 0.8rem; }
+
+      .visual {
+        position: relative;
+        min-height: 500px;
+        display: grid;
+        place-items: center;
+      }
+      .orb {
+        position: absolute;
+        width: 370px;
+        height: 370px;
+        border-radius: 50%;
+        background: linear-gradient(140deg, var(--cyan), #6376ff 58%, var(--purple));
+        filter: blur(1px);
+        animation: float 7s ease-in-out infinite;
+      }
+      .orb::after {
+        content: "";
+        position: absolute;
+        inset: 14px;
+        border-radius: 50%;
+        background: rgba(11,16,32,0.9);
+      }
+      .portrait {
+        position: relative;
+        z-index: 1;
+        width: min(330px, 76%);
+        filter: grayscale(1);
+        mix-blend-mode: screen;
+        transition: 0.3s ease;
+      }
+      .portrait:hover { filter: grayscale(0); transform: scale(1.04); }
+      .visual-tag {
+        position: absolute;
+        z-index: 2;
+        border: 1px solid var(--line);
+        background: rgba(20,31,52,0.8);
+        backdrop-filter: blur(10px);
+        border-radius: 14px;
+        padding: 12px 14px;
+        font-size: 0.76rem;
+      }
+      .tag-one { top: 12%; right: 4%; }
+      .tag-two { bottom: 12%; left: 4%; }
+      .dot {
+        display: inline-block;
+        width: 8px; height: 8px;
+        border-radius: 50%;
+        background: var(--lime);
+        margin-right: 8px;
+      }
+      @keyframes float {
+        50% { transform: translateY(-18px) rotate(6deg); }
+      }
+
+      .section-head {
+        margin-bottom: 42px;
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        align-items: end;
+      }
+      .section-head h2 {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: clamp(2.2rem, 4vw, 4rem);
+        line-height: 1;
+        letter-spacing: -0.06em;
+        margin-top: 14px;
+      }
+      .section-head p {
+        max-width: 400px;
+        color: var(--muted);
+      }
+
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 52px;
+        align-items: start;
+      }
+      .about-copy {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        color: #dbe5ff;
+      }
+      .about-copy strong { color: var(--lime); }
+      .skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .skill {
+        border: 1px solid var(--line);
+        padding: 10px 14px;
+        border-radius: 999px;
+        color: var(--muted);
+        font-size: 0.85rem;
+      }
+      .skill:hover { border-color: var(--cyan); color: var(--cyan); }
+
+      .work {
+        background: #0e1629;
+      }
+      .projects {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+      }
+      .project {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        overflow: hidden;
+        transition: 0.25s ease;
+      }
+      .project:hover {
+        transform: translateY(-6px);
+        border-color: rgba(215,255,115,0.55);
+      }
+      .project-image {
+        height: 270px;
+        overflow: hidden;
+        background: linear-gradient(135deg, #263763, #10192d);
+      }
+      .project-image img {
+        width: 100%; height: 100%; object-fit: cover;
+        opacity: 0.8;
+        transition: 0.4s ease;
+      }
+      .project:hover .project-image img { transform: scale(1.07); opacity: 1; }
+      .project-body { padding: 24px; }
+      .project h3 {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 1.35rem;
+        margin-bottom: 8px;
+      }
+      .project p { color: var(--muted); font-size: 0.92rem; }
+      .project-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 18px;
+      }
+      .project-meta span {
+        font-size: 0.72rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--cyan);
+      }
+
+      .contact-card {
+        background: linear-gradient(120deg, rgba(215,255,115,0.1), rgba(111,232,216,0.06));
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        padding: clamp(28px, 5vw, 70px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+      }
+      .contact-card h2 {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: clamp(2.2rem, 5vw, 4rem);
+        line-height: 1;
+        letter-spacing: -0.06em;
+        margin-top: 16px;
+      }
+      .contact-card p { color: var(--muted); margin-top: 14px; }
+      .socials {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px;
+        margin-top: 22px;
+        color: var(--muted);
+      }
+      .socials a:hover { color: var(--lime); }
+
+      footer {
+        padding: 24px 0 32px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 0.82rem;
+      }
+      .footer-inner {
+        display: flex;
+        justify-content: space-between;
+        gap: 18px;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(22px);
+        transition: 0.7s ease;
+      }
+      .reveal.visible { opacity: 1; transform: none; }
+
+      @media (max-width: 800px) {
+        .menu-button { display: block; }
+        .nav-links { display: none; }
+        .nav-links.open {
+          display: flex;
+          position: absolute;
+          top: 75px; left: 18px; right: 18px;
+          flex-direction: column;
+          gap: 0;
+          padding: 14px;
+          background: var(--bg-soft);
+          border: 1px solid var(--line);
+          border-radius: 16px;
+        }
+        .nav-links.open a { padding: 10px 0; }
+        .nav-cta { display: none; }
+
+        .hero-grid,
+        .about-grid,
+        .projects,
+        .contact-card {
+          grid-template-columns: 1fr;
+          display: grid;
+        }
+        .hero { padding-top: 120px; }
+        .section-head { display: block; }
+        .section-head p { margin-top: 18px; }
+        .contact-card { display: block; }
+        .contact-card .button { margin-top: 28px; }
+        .footer-inner { display: block; }
+        .footer-inner span { display: block; margin-top: 8px; }
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header">
+      <div class="container nav">
+        <a class="brand" href="#home">Bintang<span>.</span></a>
+        <button class="menu-button" id="menu-button" type="button" aria-label="Buka menu">☰</button>
+        <nav class="nav-links" id="nav-links">
+          <a href="#about">Tentang</a>
+          <a href="#work">Karya</a>
+          <a href="#contact">Kontak</a>
+        </nav>
+        <a class="nav-cta" href="mailto:bintangnusantara3832@gmail.com">Let's talk ↗</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="container hero-grid">
+          <div class="reveal">
+            <div class="eyebrow">Portfolio / 2024 — Now</div>
+            <h1>Membuat ide <em>jadi berarti.</em></h1>
+            <p class="hero-copy">
+              Halo, saya <strong>Bintang Fajar Nusantara</strong> — mahasiswa Teknik Informatika yang
+              tertarik pada UI/UX, desain digital, dan pengembangan web yang punya karakter.
+            </p>
+            <div class="actions">
+              <a class="button button-primary" href="#work">Lihat karya ↗</a>
+              <a class="button button-ghost" href="https://wa.me/6285141316787" target="_blank" rel="noreferrer">Hubungi saya</a>
+            </div>
+            <div class="stats">
+              <div class="stat">
+                <strong>UI/UX</strong>
+                <span>Design & research</span>
+              </div>
+              <div class="stat">
+                <strong>Web</strong>
+                <span>Creative frontend</span>
+              </div>
+              <div class="stat">
+                <strong>∞</strong>
+                <span>Curious learner</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="visual reveal">
+            <div class="orb"></div>
+            <img class="portrait" src="dist/img/Desain tanpa judul.png" alt="Bintang Fajar Nusantara" />
+            <div class="visual-tag tag-one"><span class="dot"></span>Available for project</div>
+            <div class="visual-tag tag-two">✦ Tegal, Indonesia</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <div class="eyebrow">01 / Tentang saya</div>
+              <h2>Desain dengan rasa ingin tahu.</h2>
+            </div>
+            <p>
+              Saya percaya karya yang baik tidak hanya tampil keren, tapi juga terasa mudah dipahami dan bermakna.
+            </p>
+          </div>
+
+          <div class="about-grid">
+            <p class="about-copy reveal">
+              Saya adalah mahasiswa Teknik Informatika yang terus berkembang di bidang <strong>UI/UX</strong>,
+              desain grafis, dan teknologi web. Saya suka membuat pengalaman digital yang rapi, modern,
+              dan komunikatif. Selain itu, saya juga senang belajar, berkolaborasi, dan mengasah kemampuan
+              kreativitas dalam setiap proyek.
+            </p>
+
+            <div class="skills reveal">
+              <span class="skill">UI/UX Design</span>
+              <span class="skill">Graphic Design</span>
+              <span class="skill">Frontend</span>
+              <span class="skill">Tailwind CSS</span>
+              <span class="skill">Figma</span>
+              <span class="skill">Creative Thinking</span>
+              <span class="skill">Microsoft Office</span>
+              <span class="skill">Teamwork</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="work" id="work">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <div class="eyebrow">02 / Selected work</div>
+              <h2>Karya pilihan.</h2>
+            </div>
+            <p>Beberapa proyek dan eksperimen yang merepresentasikan perjalanan kreatif saya.</p>
+          </div>
+
+          <div class="projects">
+            <article class="project reveal">
+              <div class="project-image">
+                <img src="dist/img/2.jpg" alt="Portfolio personal" loading="lazy" />
+              </div>
+              <div class="project-body">
+                <h3>Personal Portfolio</h3>
+                <p>Website portofolio yang menghadirkan tampilan modern, personal, dan kuat untuk membangun personal branding.</p>
+                <div class="project-meta">
+                  <span>Web Design</span>
+                  <span>UI/UX</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project reveal">
+              <div class="project-image">
+                <img src="dist/img/2.jpg" alt="Visual exploration" loading="lazy" />
+              </div>
+              <div class="project-body">
+                <h3>Visual Explorations</h3>
+                <p>Eksplorasi konseptual dan visual untuk mengasah taste desain serta menciptakan gaya yang unik.</p>
+                <div class="project-meta">
+                  <span>Brand</span>
+                  <span>Creative</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="container">
+          <div class="contact-card reveal">
+            <div>
+              <div class="eyebrow">03 / Let's connect</div>
+              <h2>Punya ide? Mari wujudkan.</h2>
+              <p>Terbuka untuk kolaborasi, proyek kreatif, atau sekadar berdiskusi tentang design & teknologi.</p>
+              <div class="socials">
+                <a href="https://github.com/bintangnusantara388" target="_blank" rel="noreferrer">GitHub ↗</a>
+                <a href="https://www.instagram.com/bntngnsntra383_/" target="_blank" rel="noreferrer">Instagram ↗</a>
+                <a href="https://youtube.com/@bntngnsntr383" target="_blank" rel="noreferrer">YouTube ↗</a>
+              </div>
+            </div>
+            <a class="button button-primary" href="mailto:bintangnusantara3832@gmail.com">Kirim email ↗</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-inner">
+        <span>© 2024 Bintang Fajar Nusantara</span>
+        <span>Designed & built with intention ✦</span>
+      </div>
+    </footer>
+
+    <script>
+      const header = document.getElementById('header');
+      const menuButton = document.getElementById('menu-button');
+      const navLinks = document.getElementById('nav-links');
+
+      menuButton.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+      });
+
+      navLinks.querySelectorAll('a').forEach((a) => {
+        a.addEventListener('click', () => navLinks.classList.remove('open'));
+      });
+
+      window.addEventListener('scroll', () => {
+        header.classList.toggle('scrolled', window.scrollY > 30);
+      });
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) entry.target.classList.add('visible');
+        });
+      }, { threshold: 0.12 });
+
+      document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('sw.js').catch(() => {});
+        });
+      }
+    </script>
+  </body>
 </html>
